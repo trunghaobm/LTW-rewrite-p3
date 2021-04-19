@@ -1,0 +1,9 @@
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.exe.config
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.exe
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.pdb
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csprojAssemblyReference.cache
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.Properties.Resources.resources
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.GenerateResource.cache
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.CoreCompileInputs.cache
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.exe
+C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.pdb
