@@ -7,3 +7,24 @@ C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrit
 C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.CoreCompileInputs.cache
 C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.exe
 C:\Users\legen\source\repos\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.pdb
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.exe.config
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.exe
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\LTW_rewrite_3rd.pdb
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\EntityFramework.dll
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\EntityFramework.SqlServer.dll
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\EntityFramework.xml
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\bin\Debug\EntityFramework.SqlServer.xml
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csprojAssemblyReference.cache
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.Properties.Resources.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.GenerateResource.cache
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.CoreCompileInputs.cache
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.CopyComplete
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.exe
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.pdb
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.Test.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.Login.LoginForStart.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Main.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Welcome.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Student.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.AddForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.ResolveComReference.cache

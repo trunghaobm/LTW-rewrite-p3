@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +56,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs">
+    <Compile Include="Access\MyLogin.cs" />
+    <Compile Include="Access\MyStudents.cs" />
+    <Compile Include="myForms\StudentForm\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="myForms\StudentForm\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFunctions\AllUser.cs" />
+    <Compile Include="Database\Login.cs" />
+    <Compile Include="Database\MyDataContext.cs" />
+    <Compile Include="Database\MySchool.cs" />
+    <Compile Include="Database\student.cs" />
+    <Compile Include="Models\Logins.cs" />
+    <Compile Include="Models\Students.cs" />
+    <Compile Include="myForms\Login\LoginForStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\Login\LoginForStart.Designer.cs">
+      <DependentUpon>LoginForStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\StudentForm\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="myForms\Login\LoginForStart.resx">
+      <DependentUpon>LoginForStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\StudentForm\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\StudentForm\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\StudentForm\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\StudentForm\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +129,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -77,9 +146,72 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Access\" />
-    <Folder Include="Database\" />
-    <Folder Include="myForms\" />
+    <None Include="icon\password_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\edit-icon-24px-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\menu-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\password+-black-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\password-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\refresh-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\remove-bin-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\search-icon-24px-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\user-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\add-icon-24px-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\back-left-icon-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\home_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\download_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
