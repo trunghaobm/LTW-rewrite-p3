@@ -71,6 +71,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(30, 30);
             this.btn_search.TabIndex = 4;
+            this.btn_search.TabStop = false;
             this.btn_search.UseVisualStyleBackColor = true;
             // 
             // txt_search
@@ -94,6 +95,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_download.Name = "btn_download";
             this.btn_download.Size = new System.Drawing.Size(30, 30);
             this.btn_download.TabIndex = 3;
+            this.btn_download.TabStop = false;
             this.btn_download.UseVisualStyleBackColor = true;
             this.btn_download.Click += new System.EventHandler(this.btn_download_Click);
             // 
@@ -108,7 +110,9 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(30, 30);
             this.btn_edit.TabIndex = 3;
+            this.btn_edit.TabStop = false;
             this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_delete
             // 
@@ -122,6 +126,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(30, 30);
             this.btn_delete.TabIndex = 2;
+            this.btn_delete.TabStop = false;
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
@@ -136,6 +141,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(30, 30);
             this.btn_add.TabIndex = 1;
+            this.btn_add.TabStop = false;
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
@@ -152,6 +158,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(30, 30);
             this.btn_home.TabIndex = 0;
+            this.btn_home.TabStop = false;
             this.btn_home.UseVisualStyleBackColor = true;
             this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 

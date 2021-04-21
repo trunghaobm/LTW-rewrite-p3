@@ -34,7 +34,7 @@ namespace LTW_rewrite_3rd.Access
             var query = "SELECT * FROM student WHERE c01_id = @id";
             //connected
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
-            command.Parameters.Add("@student_id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -54,7 +54,7 @@ namespace LTW_rewrite_3rd.Access
                     try
                     {
                         pic = (byte[])table.Rows[0][7];
-                        std.c08_Avatar = pic;
+                        std.C08_Avatar = pic;
                     }
                     catch
                     {
@@ -63,7 +63,7 @@ namespace LTW_rewrite_3rd.Access
                 }
                 else
                 {
-                    std.c08_Avatar = null;
+                    std.C08_Avatar = null;
                 }
                 return std;
             }
@@ -118,7 +118,7 @@ namespace LTW_rewrite_3rd.Access
         {
             bool check;
 
-            var query = "INSERT into student VAKUES(@C01, @CO2, @C03, @C04, @C05, @C06, @C07,@C08";
+            var query = "INSERT into student VALUES(@C01, @C02, @C03, @C04, @C05, @C06, @C07, @C08)";
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
             command.Parameters.Add("@C01", SqlDbType.Int).Value = std.C01_ID;
             command.Parameters.Add("@C02", SqlDbType.NVarChar).Value = std.C02_FirstName;
@@ -127,7 +127,7 @@ namespace LTW_rewrite_3rd.Access
             command.Parameters.Add("@C05", SqlDbType.Bit).Value = std.C05_Male;
             command.Parameters.Add("@C06", SqlDbType.NVarChar).Value = std.C06_Phone;
             command.Parameters.Add("@C07", SqlDbType.NVarChar).Value = std.C07_Address;
-            command.Parameters.Add("@C08", SqlDbType.Image).Value = std.c08_Avatar;
+            command.Parameters.Add("@C08", SqlDbType.Image).Value = std.C08_Avatar;
 
             MyDB.openConection();
             if (command.ExecuteNonQuery() == 1)
@@ -148,10 +148,10 @@ namespace LTW_rewrite_3rd.Access
             bool check;
 
             var query = "UPDATE  student SET " +
-                        "c02_firstname = @CO2, " +
+                        "c02_firstname = @C02, " +
                         "c03_lastname = @C03, " +
                         "c04_birthday = @C04, " +
-                        "c05_gender@C05, " +
+                        "c05_gender = @C05, " +
                         "c06_phonenumber = @C06, " +
                         "c07_address = @C07, " +
                         "c08_avatar = @C08 " +
@@ -164,7 +164,7 @@ namespace LTW_rewrite_3rd.Access
             command.Parameters.Add("@C05", SqlDbType.Bit).Value = std.C05_Male;
             command.Parameters.Add("@C06", SqlDbType.NVarChar).Value = std.C06_Phone;
             command.Parameters.Add("@C07", SqlDbType.NVarChar).Value = std.C07_Address;
-            command.Parameters.Add("@C08", SqlDbType.Image).Value = std.c08_Avatar;
+            command.Parameters.Add("@C08", SqlDbType.Image).Value = std.C08_Avatar;
 
             MyDB.openConection();
             if (command.ExecuteNonQuery() == 1)
@@ -189,6 +189,29 @@ namespace LTW_rewrite_3rd.Access
                         "WHERE c01_id = @C01";
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
             command.Parameters.Add("@C01", SqlDbType.Int).Value = std.C01_ID;
+
+            MyDB.openConection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                check = true;
+            }
+            else
+            {
+                check = false;
+            }
+            MyDB.closedConection();
+
+            return check;
+        }
+
+        public bool Delete(string id)
+        {
+            bool check;
+
+            var query = "DELETE student " +
+                        "WHERE c01_id = @C01";
+            SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
+            command.Parameters.Add("@C01", SqlDbType.Int).Value = int.Parse(id);
 
             MyDB.openConection();
             if (command.ExecuteNonQuery() == 1)

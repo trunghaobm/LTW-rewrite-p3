@@ -37,7 +37,7 @@ namespace LTW_rewrite_3rd.Models
         public bool C05_Male { get => c05male; set => c05male = value; }
         public string C06_Phone { get => c06phone; set => c06phone = value; }
         public string C07_Address { get => c07address; set => c07address = value; }
-        public byte[] c08_Avatar { get => c08avatar; set => c08avatar = value; }
+        public byte[] C08_Avatar { get => c08avatar; set => c08avatar = value; }
 
     }
 }

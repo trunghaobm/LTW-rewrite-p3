@@ -28,3 +28,4 @@ D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debu
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Student.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.AddForm.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.ResolveComReference.cache
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.EditForm.resources

@@ -1,7 +1,7 @@
 ﻿
 namespace LTW_rewrite_3rd.myForms.StudentForm
 {
-    partial class AddForm
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,15 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel_buttons = new System.Windows.Forms.Panel();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.panel_info2 = new System.Windows.Forms.Panel();
+            this.btn_avatar = new System.Windows.Forms.Button();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.label_address = new System.Windows.Forms.Label();
+            this.txt_phone = new System.Windows.Forms.TextBox();
+            this.label_phone = new System.Windows.Forms.Label();
             this.panel_info = new System.Windows.Forms.Panel();
             this.panel_gender = new System.Windows.Forms.Panel();
             this.rad_female = new System.Windows.Forms.RadioButton();
@@ -42,20 +51,103 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.label_lastname = new System.Windows.Forms.Label();
             this.txt_id = new System.Windows.Forms.TextBox();
             this.label_id = new System.Windows.Forms.Label();
-            this.panel_info2 = new System.Windows.Forms.Panel();
-            this.btn_avatar = new System.Windows.Forms.Button();
-            this.txt_address = new System.Windows.Forms.TextBox();
-            this.label_address = new System.Windows.Forms.Label();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.label_phone = new System.Windows.Forms.Label();
-            this.panel_buttons = new System.Windows.Forms.Panel();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_add = new System.Windows.Forms.Button();
+            this.panel_buttons.SuspendLayout();
+            this.panel_info2.SuspendLayout();
             this.panel_info.SuspendLayout();
             this.panel_gender.SuspendLayout();
-            this.panel_info2.SuspendLayout();
-            this.panel_buttons.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel_buttons
+            // 
+            this.panel_buttons.Controls.Add(this.btn_cancel);
+            this.panel_buttons.Controls.Add(this.btn_edit);
+            this.panel_buttons.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_buttons.Location = new System.Drawing.Point(364, 479);
+            this.panel_buttons.Name = "panel_buttons";
+            this.panel_buttons.Size = new System.Drawing.Size(429, 90);
+            this.panel_buttons.TabIndex = 5;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Location = new System.Drawing.Point(251, 3);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(170, 50);
+            this.btn_cancel.TabIndex = 0;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(15, 0);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(170, 50);
+            this.btn_edit.TabIndex = 0;
+            this.btn_edit.Text = "Edit";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // panel_info2
+            // 
+            this.panel_info2.Controls.Add(this.btn_avatar);
+            this.panel_info2.Controls.Add(this.txt_address);
+            this.panel_info2.Controls.Add(this.label_address);
+            this.panel_info2.Controls.Add(this.txt_phone);
+            this.panel_info2.Controls.Add(this.label_phone);
+            this.panel_info2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_info2.Location = new System.Drawing.Point(364, 62);
+            this.panel_info2.Name = "panel_info2";
+            this.panel_info2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panel_info2.Size = new System.Drawing.Size(430, 400);
+            this.panel_info2.TabIndex = 4;
+            // 
+            // btn_avatar
+            // 
+            this.btn_avatar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_avatar.FlatAppearance.BorderSize = 0;
+            this.btn_avatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_avatar.Location = new System.Drawing.Point(271, 245);
+            this.btn_avatar.Name = "btn_avatar";
+            this.btn_avatar.Size = new System.Drawing.Size(150, 150);
+            this.btn_avatar.TabIndex = 4;
+            this.btn_avatar.UseVisualStyleBackColor = false;
+            this.btn_avatar.Click += new System.EventHandler(this.btn_avatar_Click);
+            // 
+            // txt_address
+            // 
+            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_address.Location = new System.Drawing.Point(15, 137);
+            this.txt_address.Multiline = true;
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(406, 102);
+            this.txt_address.TabIndex = 3;
+            // 
+            // label_address
+            // 
+            this.label_address.AutoSize = true;
+            this.label_address.Location = new System.Drawing.Point(330, 103);
+            this.label_address.Name = "label_address";
+            this.label_address.Size = new System.Drawing.Size(97, 31);
+            this.label_address.TabIndex = 2;
+            this.label_address.Text = "Địa chỉ";
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_phone.Location = new System.Drawing.Point(15, 61);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(406, 31);
+            this.txt_phone.TabIndex = 1;
+            // 
+            // label_phone
+            // 
+            this.label_phone.AutoSize = true;
+            this.label_phone.Location = new System.Drawing.Point(256, 14);
+            this.label_phone.Name = "label_phone";
+            this.label_phone.Size = new System.Drawing.Size(171, 31);
+            this.label_phone.TabIndex = 0;
+            this.label_phone.Text = "Số điện thoại";
             // 
             // panel_info
             // 
@@ -69,10 +161,10 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.panel_info.Controls.Add(this.txt_id);
             this.panel_info.Controls.Add(this.label_id);
             this.panel_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_info.Location = new System.Drawing.Point(12, 96);
+            this.panel_info.Location = new System.Drawing.Point(12, 62);
             this.panel_info.Name = "panel_info";
             this.panel_info.Size = new System.Drawing.Size(346, 400);
-            this.panel_info.TabIndex = 0;
+            this.panel_info.TabIndex = 3;
             // 
             // panel_gender
             // 
@@ -93,7 +185,6 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.rad_female.TabIndex = 1;
             this.rad_female.Text = "Nữ";
             this.rad_female.UseVisualStyleBackColor = true;
-            this.rad_female.Click += new System.EventHandler(this.rad_male_Click);
             // 
             // rad_male
             // 
@@ -106,7 +197,6 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.rad_male.TabStop = true;
             this.rad_male.Text = "Nam";
             this.rad_male.UseVisualStyleBackColor = true;
-            this.rad_male.Click += new System.EventHandler(this.rad_male_Click);
             // 
             // label_gioiTinh
             // 
@@ -175,6 +265,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             // txt_id
             // 
             this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(9, 34);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(323, 31);
@@ -189,100 +280,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.label_id.TabIndex = 0;
             this.label_id.Text = "Mã số sinh viên";
             // 
-            // panel_info2
-            // 
-            this.panel_info2.Controls.Add(this.btn_avatar);
-            this.panel_info2.Controls.Add(this.txt_address);
-            this.panel_info2.Controls.Add(this.label_address);
-            this.panel_info2.Controls.Add(this.txt_phone);
-            this.panel_info2.Controls.Add(this.label_phone);
-            this.panel_info2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_info2.Location = new System.Drawing.Point(364, 96);
-            this.panel_info2.Name = "panel_info2";
-            this.panel_info2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel_info2.Size = new System.Drawing.Size(430, 400);
-            this.panel_info2.TabIndex = 1;
-            // 
-            // btn_avatar
-            // 
-            this.btn_avatar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_avatar.FlatAppearance.BorderSize = 0;
-            this.btn_avatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_avatar.Location = new System.Drawing.Point(271, 245);
-            this.btn_avatar.Name = "btn_avatar";
-            this.btn_avatar.Size = new System.Drawing.Size(150, 150);
-            this.btn_avatar.TabIndex = 4;
-            this.btn_avatar.Text = "Click để tải ảnh lên";
-            this.btn_avatar.UseVisualStyleBackColor = false;
-            this.btn_avatar.Click += new System.EventHandler(this.btn_avatar_Click);
-            // 
-            // txt_address
-            // 
-            this.txt_address.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_address.Location = new System.Drawing.Point(15, 137);
-            this.txt_address.Multiline = true;
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(406, 102);
-            this.txt_address.TabIndex = 3;
-            // 
-            // label_address
-            // 
-            this.label_address.AutoSize = true;
-            this.label_address.Location = new System.Drawing.Point(330, 103);
-            this.label_address.Name = "label_address";
-            this.label_address.Size = new System.Drawing.Size(97, 31);
-            this.label_address.TabIndex = 2;
-            this.label_address.Text = "Địa chỉ";
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_phone.Location = new System.Drawing.Point(15, 61);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(406, 31);
-            this.txt_phone.TabIndex = 1;
-            // 
-            // label_phone
-            // 
-            this.label_phone.AutoSize = true;
-            this.label_phone.Location = new System.Drawing.Point(256, 14);
-            this.label_phone.Name = "label_phone";
-            this.label_phone.Size = new System.Drawing.Size(171, 31);
-            this.label_phone.TabIndex = 0;
-            this.label_phone.Text = "Số điện thoại";
-            // 
-            // panel_buttons
-            // 
-            this.panel_buttons.Controls.Add(this.btn_cancel);
-            this.panel_buttons.Controls.Add(this.btn_add);
-            this.panel_buttons.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_buttons.Location = new System.Drawing.Point(364, 513);
-            this.panel_buttons.Name = "panel_buttons";
-            this.panel_buttons.Size = new System.Drawing.Size(429, 90);
-            this.panel_buttons.TabIndex = 2;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Location = new System.Drawing.Point(251, 3);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(170, 50);
-            this.btn_cancel.TabIndex = 0;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Location = new System.Drawing.Point(15, 0);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.Size = new System.Drawing.Size(170, 50);
-            this.btn_add.TabIndex = 0;
-            this.btn_add.Text = "Add";
-            this.btn_add.UseVisualStyleBackColor = true;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // AddForm
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -291,44 +289,44 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.Controls.Add(this.panel_buttons);
             this.Controls.Add(this.panel_info2);
             this.Controls.Add(this.panel_info);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddForm";
-            this.Text = "AddForm";
+            this.Name = "EditForm";
+            this.Text = "EditForm";
+            this.Load += new System.EventHandler(this.EditForm_Load);
+            this.panel_buttons.ResumeLayout(false);
+            this.panel_info2.ResumeLayout(false);
+            this.panel_info2.PerformLayout();
             this.panel_info.ResumeLayout(false);
             this.panel_info.PerformLayout();
             this.panel_gender.ResumeLayout(false);
             this.panel_gender.PerformLayout();
-            this.panel_info2.ResumeLayout(false);
-            this.panel_info2.PerformLayout();
-            this.panel_buttons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel_info;
-        private System.Windows.Forms.TextBox txt_firstname;
-        private System.Windows.Forms.Label label_firsname;
-        private System.Windows.Forms.TextBox txt_lastname;
-        private System.Windows.Forms.Label label_lastname;
-        private System.Windows.Forms.TextBox txt_id;
-        private System.Windows.Forms.Label label_id;
-        private System.Windows.Forms.Label label_birthday;
-        private System.Windows.Forms.DateTimePicker date_birthday;
-        private System.Windows.Forms.Panel panel_gender;
-        private System.Windows.Forms.RadioButton rad_female;
-        private System.Windows.Forms.RadioButton rad_male;
-        private System.Windows.Forms.Label label_gioiTinh;
-        private System.Windows.Forms.Panel panel_info2;
-        private System.Windows.Forms.Button btn_avatar;
-        private System.Windows.Forms.TextBox txt_address;
-        private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.TextBox txt_phone;
-        private System.Windows.Forms.Label label_phone;
         private System.Windows.Forms.Panel panel_buttons;
         private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Panel panel_info2;
+        private System.Windows.Forms.Label label_address;
+        private System.Windows.Forms.Label label_phone;
+        private System.Windows.Forms.Panel panel_info;
+        private System.Windows.Forms.Panel panel_gender;
+        private System.Windows.Forms.Label label_gioiTinh;
+        private System.Windows.Forms.Label label_birthday;
+        private System.Windows.Forms.Label label_firsname;
+        private System.Windows.Forms.Label label_lastname;
+        private System.Windows.Forms.Label label_id;
+        public System.Windows.Forms.Button btn_avatar;
+        public System.Windows.Forms.TextBox txt_address;
+        public System.Windows.Forms.TextBox txt_phone;
+        public System.Windows.Forms.DateTimePicker date_birthday;
+        public System.Windows.Forms.TextBox txt_firstname;
+        public System.Windows.Forms.TextBox txt_lastname;
+        public System.Windows.Forms.TextBox txt_id;
+        public System.Windows.Forms.RadioButton rad_female;
+        public System.Windows.Forms.RadioButton rad_male;
     }
 }

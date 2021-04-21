@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Word;
+﻿using LTW_rewrite_3rd.Access;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace LTW_rewrite_3rd.myFunctions
 {
-    class AllUser
+    public class AllUser
     {
         public static void OpenChildForm(Form childform, Panel panelMain)
         {
@@ -59,14 +60,30 @@ namespace LTW_rewrite_3rd.myFunctions
                 {
                     for (int c = 0; c < ColumnCount - 1; c++)
                     {
-                        myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = DGV.Rows[r].Cells[c].Value.ToString();
+                        switch (c)
+                        {
+                            case 3:     //chỉ lấy format ngày
+                                string myDate = DGV.Rows[r].Cells[c].Value.ToString().Split(' ')[0];
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = myDate; 
+                                break;
+                            case 4: //cột giới tính
+                                string gen = "Nữ";
+                                if ((bool)DGV.Rows[r].Cells[c].Value)
+                                {
+                                    gen = "Nam";
+                                }
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = gen;
+                                break;
+                            default:
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = DGV.Rows[r].Cells[c].Value.ToString(); 
+                                break;
+                        }
                     }
                 }
 
-                for (int r = 2; r <= RowCount; r++)
+                for (int r = 2; r <= RowCount; r++)//cột avatar
                 {
                     if (DGV.Rows[r - 2].Cells[7].Value.ToString() != null)
-
                     {
                         try
                         {
@@ -91,6 +108,25 @@ namespace LTW_rewrite_3rd.myFunctions
                 //save the file
                 myDoc.SaveAs2(filename);
             }
+        }
+
+        public static byte[] ImageToBinary(Image source)
+        {
+            MemoryStream ms = new MemoryStream();
+            source.Save(ms, source.RawFormat);
+            return ms.ToArray();
+        }
+
+        public static Image BinaryToImage(byte[] source)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream(source, 0, source.Length);
+                ms.Write(source, 0, source.Length);
+                return Image.FromStream(ms, true);//Exception occurs here
+            }
+            catch { }
+            return null;
         }
     }
 }

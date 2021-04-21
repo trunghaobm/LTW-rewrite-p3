@@ -58,6 +58,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(175, 25);
             this.btn_Logout.TabIndex = 2;
+            this.btn_Logout.TabStop = false;
             this.btn_Logout.Text = "Log out";
             this.btn_Logout.UseVisualStyleBackColor = false;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
@@ -73,6 +74,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_sinhVien.Name = "btn_sinhVien";
             this.btn_sinhVien.Size = new System.Drawing.Size(175, 50);
             this.btn_sinhVien.TabIndex = 1;
+            this.btn_sinhVien.TabStop = false;
             this.btn_sinhVien.Text = "Sinh Viên";
             this.btn_sinhVien.UseVisualStyleBackColor = true;
             this.btn_sinhVien.Click += new System.EventHandler(this.btn_sinhVien_Click);
