@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms
 {
     public partial class Welcome : Form
     {

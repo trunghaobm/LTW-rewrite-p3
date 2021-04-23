@@ -1,12 +1,16 @@
 ﻿using LTW_rewrite_3rd.Database;
 using LTW_rewrite_3rd.Models;
+using Microsoft.Office.Interop.Word;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LTW_rewrite_3rd.Access
 {
@@ -18,11 +22,11 @@ namespace LTW_rewrite_3rd.Access
         public MyStudents() { }
 
         //get all students from database
-        public DataTable Gets()
+        public System.Data.DataTable Gets()
         {
             SqlCommand command = new SqlCommand("SELECT * from student", MyDB.GetConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
             adapter.Fill(table);
             return table;
         }
@@ -36,7 +40,7 @@ namespace LTW_rewrite_3rd.Access
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
             command.Parameters.Add("@id", SqlDbType.Int).Value = id;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
             adapter.Fill(table);
             //check
             if (table.Rows.Count > 0)
@@ -74,33 +78,33 @@ namespace LTW_rewrite_3rd.Access
         }
 
         //get students by them gender
-        public DataTable GetGender(bool male)
+        public System.Data.DataTable GetGender(bool male)
         {
             var query = "SELECT * from student " +
                         "WHERE C05_gender = @gender";
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
             command.Parameters.Add("@gender", SqlDbType.Bit).Value = male;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
             adapter.Fill(table);
             return table;
         }
 
         //get students by them bithday
-        public DataTable GetBirthday(DateTime date)
+        public System.Data.DataTable GetBirthday(DateTime date)
         {
             var query = "SELECT * from student " +
                         "WHERE C04_birthday = @birthday";
             SqlCommand command = new SqlCommand(query, MyDB.GetConnection);
             command.Parameters.Add("@birthday", SqlDbType.DateTime).Value = date.Date;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
             adapter.Fill(table);
             return table;
         }
 
         //get students who birthday between date_first and date_last
-        public DataTable GetBirthdayRange(DateTime date_first, DateTime date_last)
+        public System.Data.DataTable GetBirthdayRange(DateTime date_first, DateTime date_last)
         {
             var query = "SELECT * from student " +
                         "WHERE convert(date,birthday) between @date_first and @date_last";
@@ -108,7 +112,7 @@ namespace LTW_rewrite_3rd.Access
             command.Parameters.Add("@date_last", SqlDbType.DateTime).Value = date_first.Date;
             command.Parameters.Add("@date_last", SqlDbType.DateTime).Value = date_last.Date;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
+            System.Data.DataTable table = new System.Data.DataTable();
             adapter.Fill(table);
             return table;
         }
@@ -147,7 +151,7 @@ namespace LTW_rewrite_3rd.Access
         {
             bool check;
 
-            var query = "UPDATE  student SET " +
+            var query = "UPDATE student SET " +
                         "c02_firstname = @C02, " +
                         "c03_lastname = @C03, " +
                         "c04_birthday = @C04, " +
@@ -160,7 +164,7 @@ namespace LTW_rewrite_3rd.Access
             command.Parameters.Add("@C01", SqlDbType.Int).Value = std.C01_ID;
             command.Parameters.Add("@C02", SqlDbType.NVarChar).Value = std.C02_FirstName;
             command.Parameters.Add("@C03", SqlDbType.NVarChar).Value = std.C03_LastName;
-            command.Parameters.Add("@C04", SqlDbType.DateTime).Value = std.C04_Birthday;
+            command.Parameters.Add("@C04", SqlDbType.Date).Value = std.C04_Birthday;
             command.Parameters.Add("@C05", SqlDbType.Bit).Value = std.C05_Male;
             command.Parameters.Add("@C06", SqlDbType.NVarChar).Value = std.C06_Phone;
             command.Parameters.Add("@C07", SqlDbType.NVarChar).Value = std.C07_Address;
@@ -225,6 +229,77 @@ namespace LTW_rewrite_3rd.Access
             MyDB.closedConection();
 
             return check;
+        }
+
+        public static void DownloadWord(DataGridView DGV, string filename, string header)
+        {
+            if (DGV.Rows.Count != 0)
+            {
+                int RowCount = DGV.Rows.Count;
+                int ColumnCount = DGV.Columns.Count;
+                Document myDoc = new Document();
+                myDoc.Application.Visible = true;
+                myDoc.PageSetup.Orientation = WdOrientation.wdOrientLandscape;
+                //header
+                foreach (Section section in myDoc.Application.ActiveDocument.Sections) //Document myDoc have sections
+                {
+                    Range headerRange = section.Headers[WdHeaderFooterIndex.wdHeaderFooterPrimary].Range; //section have ranges
+                    headerRange.Fields.Add(headerRange, WdFieldType.wdFieldPage);
+                    headerRange.Text = header;
+                    headerRange.Font.Size = 16;
+                    headerRange.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphCenter;
+                }
+                object start = 0;
+                object end = 0;
+                object myMissing = System.Reflection.Missing.Value;
+                var myPara = myDoc.Content.Paragraphs.Add(ref myMissing);
+                myPara.Range.Tables.Add(myPara.Range, RowCount, ColumnCount);
+                myDoc.Application.ActiveDocument.Tables[1].Range.Font.Size = 11;
+                myDoc.Application.ActiveDocument.Tables[1].set_Style("Plain Table 1");
+                for (int c = 0; c < ColumnCount; c++)
+                {
+                    myDoc.Application.ActiveDocument.Tables[1].Cell(1, c + 1).Range.Text = DGV.Columns[c].HeaderText.ToString();
+                }
+
+                for (int r = 0; r <= RowCount - 2; r++)
+                {
+                    for (int c = 0; c < ColumnCount; c++)
+                    {
+                        switch (c)
+                        {
+                            case 3:     //chỉ lấy format ngày
+                                string myDate = DGV.Rows[r].Cells[c].Value.ToString().Split(' ')[0];
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = myDate;
+                                break;
+                            case 4: //cột giới tính
+                                string gen = "Nữ";
+                                if ((bool)DGV.Rows[r].Cells[c].Value)
+                                {
+                                    gen = "Nam";
+                                }
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = gen;
+                                break;
+                            case 7:
+                                if (DGV.Rows[r].Cells[c].Value.ToString() != null)
+                                {
+                                    byte[] imgbyte = (byte[])DGV.Rows[r].Cells[c].Value;
+                                    MemoryStream ms = new MemoryStream(imgbyte);
+                                    Image finalPic = (Image)(new Bitmap(Image.FromStream(ms), new Size(50, 50)));
+                                    Clipboard.SetDataObject(finalPic);
+                                    Image sparePicture = Image.FromStream(ms);
+                                    myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Paste();
+                                }
+                                break;
+                            default:
+                                myDoc.Application.ActiveDocument.Tables[1].Cell(r + 2, c + 1).Range.Text = DGV.Rows[r].Cells[c].Value.ToString();
+                                break;
+                        }
+                    }
+                }
+
+                //save the file
+                myDoc.SaveAs2(filename);
+            }
         }
     }
 }

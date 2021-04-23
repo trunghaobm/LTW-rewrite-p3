@@ -40,13 +40,11 @@ namespace LTW_rewrite_3rd.myForms.Login
             {
                 if (lg.CheckLogin(txt_username.Text, txt_password.Text))
                 {
-                    //dang nhap dung mat khau se duoc tiep tuc
                     loginaccess = true;
                     this.Close();
                 }
                 else
                 {
-                    //dang nhap sai se buoc nhap lai
                     loginaccess = false;
                     MessageBox.Show("Tài khoản hoặc mật khẩu sai!");
                 } 
@@ -123,6 +121,33 @@ namespace LTW_rewrite_3rd.myForms.Login
             //        btn_register_Click(null, null);
             //    }
             //}
+        }
+
+        private void TextBox_Enter(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.SelectAll();
+        }
+
+        private void TextBox_Click(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            txt.SelectAll();
+        }
+
+        private void Login_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                if (btn_login.Visible)
+                {
+                    btn_login_Click(null, null);
+                }
+                else
+                {
+                    btn_register_Click(null, null);
+                }
+            }
         }
     }
 }

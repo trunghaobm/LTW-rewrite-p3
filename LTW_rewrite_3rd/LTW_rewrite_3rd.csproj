@@ -57,8 +57,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access\MyCourses.cs" />
     <Compile Include="Access\MyLogin.cs" />
     <Compile Include="Access\MyStudents.cs" />
+    <Compile Include="Models\Courses.cs" />
+    <Compile Include="myForms\CourseForm\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\CourseForm\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\CourseForm\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\CourseForm\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\CourseForm\FCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\CourseForm\FCourse.Designer.cs">
+      <DependentUpon>FCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="myForms\StudentForm\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +91,11 @@
     <Compile Include="myForms\StudentForm\EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="myForms\StudentForm\Student.cs">
+    <Compile Include="myForms\StudentForm\FStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myForms\StudentForm\Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
+    <Compile Include="myForms\StudentForm\FStudent.Designer.cs">
+      <DependentUpon>FStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="myFunctions\AllUser.cs" />
     <Compile Include="Database\Login.cs" />
@@ -90,16 +110,16 @@
     <Compile Include="myForms\Login\LoginForStart.Designer.cs">
       <DependentUpon>LoginForStart.cs</DependentUpon>
     </Compile>
-    <Compile Include="myForms\StudentForm\Main.cs">
+    <Compile Include="myForms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myForms\StudentForm\Main.Designer.cs">
+    <Compile Include="myForms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="myForms\StudentForm\Welcome.cs">
+    <Compile Include="myForms\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myForms\StudentForm\Welcome.Designer.cs">
+    <Compile Include="myForms\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Test.cs">
@@ -110,6 +130,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="myForms\CourseForm\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\CourseForm\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\CourseForm\FCourse.resx">
+      <DependentUpon>FCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myForms\Login\LoginForStart.resx">
       <DependentUpon>LoginForStart.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,13 +148,13 @@
     <EmbeddedResource Include="myForms\StudentForm\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myForms\StudentForm\Main.resx">
+    <EmbeddedResource Include="myForms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myForms\StudentForm\Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
+    <EmbeddedResource Include="myForms\StudentForm\FStudent.resx">
+      <DependentUpon>FStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="myForms\StudentForm\Welcome.resx">
+    <EmbeddedResource Include="myForms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
@@ -222,6 +251,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Border\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

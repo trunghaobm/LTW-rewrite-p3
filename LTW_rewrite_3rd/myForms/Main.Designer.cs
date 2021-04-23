@@ -1,5 +1,5 @@
 ﻿
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms
 {
     partial class Main
     {
@@ -31,6 +31,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
         {
             this.panel_leftmenu = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
+            this.btn_course = new System.Windows.Forms.Button();
             this.btn_sinhVien = new System.Windows.Forms.Button();
             this.pic_banner = new System.Windows.Forms.PictureBox();
             this.panel_main = new System.Windows.Forms.Panel();
@@ -42,11 +43,12 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             // 
             this.panel_leftmenu.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel_leftmenu.Controls.Add(this.btn_Logout);
+            this.panel_leftmenu.Controls.Add(this.btn_course);
             this.panel_leftmenu.Controls.Add(this.btn_sinhVien);
             this.panel_leftmenu.Controls.Add(this.pic_banner);
             this.panel_leftmenu.Location = new System.Drawing.Point(0, 0);
             this.panel_leftmenu.Name = "panel_leftmenu";
-            this.panel_leftmenu.Size = new System.Drawing.Size(175, 675);
+            this.panel_leftmenu.Size = new System.Drawing.Size(175, 660);
             this.panel_leftmenu.TabIndex = 0;
             // 
             // btn_Logout
@@ -62,6 +64,22 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_Logout.Text = "Log out";
             this.btn_Logout.UseVisualStyleBackColor = false;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // btn_course
+            // 
+            this.btn_course.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_course.FlatAppearance.BorderSize = 0;
+            this.btn_course.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_course.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_course.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_course.Location = new System.Drawing.Point(0, 225);
+            this.btn_course.Name = "btn_course";
+            this.btn_course.Size = new System.Drawing.Size(175, 50);
+            this.btn_course.TabIndex = 1;
+            this.btn_course.TabStop = false;
+            this.btn_course.Text = "Khóa học";
+            this.btn_course.UseVisualStyleBackColor = true;
+            this.btn_course.Click += new System.EventHandler(this.btn_course_Click);
             // 
             // btn_sinhVien
             // 
@@ -91,7 +109,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             // panel_main
             // 
             this.panel_main.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_main.Location = new System.Drawing.Point(178, 0);
+            this.panel_main.Location = new System.Drawing.Point(175, 0);
             this.panel_main.Name = "panel_main";
             this.panel_main.Size = new System.Drawing.Size(806, 661);
             this.panel_main.TabIndex = 1;
@@ -101,7 +119,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(981, 661);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_leftmenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -123,5 +141,6 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
         private System.Windows.Forms.Button btn_Logout;
         private System.Windows.Forms.Button btn_sinhVien;
         private System.Windows.Forms.Panel panel_main;
+        private System.Windows.Forms.Button btn_course;
     }
 }

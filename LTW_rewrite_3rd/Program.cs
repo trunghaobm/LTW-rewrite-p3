@@ -16,7 +16,7 @@ namespace LTW_rewrite_3rd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new myForms.StudentForm.Main());
+            Application.Run(new myForms.Main());
         }
     }
 }

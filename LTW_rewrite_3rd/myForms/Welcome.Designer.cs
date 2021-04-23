@@ -1,5 +1,5 @@
 ﻿
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms
 {
     partial class Welcome
     {

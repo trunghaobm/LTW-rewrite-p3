@@ -80,7 +80,6 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             {
                 MessageBox.Show(ex.Message, null, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         public bool _Close()

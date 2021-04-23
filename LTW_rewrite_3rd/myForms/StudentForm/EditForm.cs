@@ -42,6 +42,18 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             btn_avatar.BackgroundImage = AllUser.BinaryToImage(std.C08_Avatar);
         }
 
+        private void _LoadBack_()
+        {
+            std.C01_ID = int.Parse(txt_id.Text);
+            std.C02_FirstName = txt_firstname.Text;
+            std.C03_LastName = txt_lastname.Text;
+            std.C04_Birthday = date_birthday.Value;
+            std.C05_Male = rad_male.Checked;
+            std.C06_Phone = txt_phone.Text;
+            std.C07_Address = txt_address.Text;
+            std.C08_Avatar =AllUser.ImageToBinary(btn_avatar.BackgroundImage);
+        }
+
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,7 +61,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            _Load();
+            _LoadBack_();
             if(mySTD.Edit(std))
             {
                 MessageBox.Show("done");

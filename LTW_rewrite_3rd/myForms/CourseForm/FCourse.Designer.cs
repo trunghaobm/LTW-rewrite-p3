@@ -1,7 +1,7 @@
 ﻿
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms.CourseForm
 {
-    partial class Student
+    partial class FCourse
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgv_list = new System.Windows.Forms.DataGridView();
             this.panel_topmenu = new System.Windows.Forms.Panel();
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
@@ -38,11 +39,23 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_home = new System.Windows.Forms.Button();
             this.panel_list = new System.Windows.Forms.Panel();
-            this.dgv_listStudent = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_list)).BeginInit();
             this.panel_topmenu.SuspendLayout();
             this.panel_list.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listStudent)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgv_list
+            // 
+            this.dgv_list.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dgv_list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_list.Location = new System.Drawing.Point(0, 0);
+            this.dgv_list.Name = "dgv_list";
+            this.dgv_list.ReadOnly = true;
+            this.dgv_list.Size = new System.Drawing.Size(806, 631);
+            this.dgv_list.TabIndex = 0;
+            this.dgv_list.TabStop = false;
             // 
             // panel_topmenu
             // 
@@ -58,7 +71,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.panel_topmenu.Location = new System.Drawing.Point(0, 0);
             this.panel_topmenu.Name = "panel_topmenu";
             this.panel_topmenu.Size = new System.Drawing.Size(806, 30);
-            this.panel_topmenu.TabIndex = 0;
+            this.panel_topmenu.TabIndex = 2;
             // 
             // btn_search
             // 
@@ -73,6 +86,7 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.btn_search.TabIndex = 4;
             this.btn_search.TabStop = false;
             this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
@@ -164,58 +178,43 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             // 
             // panel_list
             // 
-            this.panel_list.Controls.Add(this.dgv_listStudent);
+            this.panel_list.Controls.Add(this.dgv_list);
             this.panel_list.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_list.Location = new System.Drawing.Point(0, 30);
             this.panel_list.Name = "panel_list";
             this.panel_list.Size = new System.Drawing.Size(806, 631);
-            this.panel_list.TabIndex = 1;
+            this.panel_list.TabIndex = 3;
             // 
-            // dgv_listStudent
-            // 
-            this.dgv_listStudent.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.dgv_listStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_listStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_listStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_listStudent.Location = new System.Drawing.Point(0, 0);
-            this.dgv_listStudent.Name = "dgv_listStudent";
-            this.dgv_listStudent.ReadOnly = true;
-            this.dgv_listStudent.Size = new System.Drawing.Size(806, 631);
-            this.dgv_listStudent.TabIndex = 0;
-            this.dgv_listStudent.TabStop = false;
-            this.dgv_listStudent.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listStudent_CellDoubleClick);
-            // 
-            // Student
+            // FCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(806, 661);
-            this.Controls.Add(this.panel_list);
             this.Controls.Add(this.panel_topmenu);
+            this.Controls.Add(this.panel_list);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Student";
-            this.Text = "Student";
-            this.Load += new System.EventHandler(this.Student_Load);
+            this.Name = "FCourse";
+            this.Text = "FCourse";
+            this.Load += new System.EventHandler(this.FCourse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_list)).EndInit();
             this.panel_topmenu.ResumeLayout(false);
             this.panel_topmenu.PerformLayout();
             this.panel_list.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_listStudent)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgv_list;
         private System.Windows.Forms.Panel panel_topmenu;
-        private System.Windows.Forms.Panel panel_list;
-        private System.Windows.Forms.DataGridView dgv_listStudent;
-        private System.Windows.Forms.Button btn_home;
-        private System.Windows.Forms.Button btn_edit;
-        private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Button btn_download;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.Panel panel_list;
     }
 }

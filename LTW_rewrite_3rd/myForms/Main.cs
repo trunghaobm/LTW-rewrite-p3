@@ -9,14 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LTW_rewrite_3rd.myForms.StudentForm;
+using LTW_rewrite_3rd.myForms.CourseForm;
 
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms
 {
     public partial class Main : Form
     {
         Welcome wlc = new Welcome();
         LoginForStart lg = new LoginForStart();
-        Student std = new Student();
+        FStudent std = new FStudent();
+        FCourse crs = new FCourse();
         public Main()
         {
             InitializeComponent();
@@ -52,6 +55,8 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
         {
             if(btn_sinhVien.BackColor == SystemColors.ControlDarkDark)
             {
+                TurnOffAllButton();
+
                 btn_sinhVien.BackColor = SystemColors.ControlDark;
                 panel_main.Controls.Clear();
                 AllUser.OpenChildForm(std, panel_main);
@@ -69,6 +74,24 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             {
                 this.Close();
             }
+        }
+
+        private void btn_course_Click(object sender, EventArgs e)
+        {
+            if (btn_course.BackColor == SystemColors.ControlDarkDark)
+            {
+                TurnOffAllButton();
+
+                btn_course.BackColor = SystemColors.ControlDark;
+                panel_main.Controls.Clear();
+                AllUser.OpenChildForm(crs, panel_main);
+            }
+        }
+
+        private void TurnOffAllButton()
+        {
+            btn_sinhVien.BackColor = SystemColors.ControlDarkDark;
+            btn_course.BackColor = SystemColors.ControlDarkDark;
         }
     }
 }

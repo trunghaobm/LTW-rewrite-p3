@@ -23,9 +23,12 @@ D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debu
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.pdb
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.Test.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.Login.LoginForStart.resources
-D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Main.resources
-D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Welcome.resources
-D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.Student.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.AddForm.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.csproj.ResolveComReference.cache
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.EditForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.Main.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.CourseForm.FCourse.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.Welcome.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.FStudent.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.CourseForm.AddForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.CourseForm.EditForm.resources
