@@ -1,7 +1,7 @@
 ﻿
-namespace LTW_rewrite_3rd.myForms.StudentForm
+namespace LTW_rewrite_3rd.myForms.SubjectForm
 {
-    partial class FStudent
+    partial class FSubject
     {
         /// <summary>
         /// Required designer variable.
@@ -286,9 +286,9 @@ namespace LTW_rewrite_3rd.myForms.StudentForm
             this.Controls.Add(this.panel_list);
             this.Controls.Add(this.panel_topmenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FStudent";
-            this.Text = "Student";
-            this.Load += new System.EventHandler(this.Student_Load);
+            this.Name = "FSubject";
+            this.Text = "Subject";
+            this.Load += new System.EventHandler(this.FSubject_Load);
             this.panel_topmenu.ResumeLayout(false);
             this.panel_topmenu.PerformLayout();
             this.panel_list.ResumeLayout(false);

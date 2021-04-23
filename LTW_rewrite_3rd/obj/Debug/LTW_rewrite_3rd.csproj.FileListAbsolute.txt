@@ -32,3 +32,9 @@ D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debu
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.StudentForm.FStudent.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.CourseForm.AddForm.resources
 D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.CourseForm.EditForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.ScoreForm.AddForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.ScoreForm.EditForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.ScoreForm.FScore.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.SubjectForm.AddForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.SubjectForm.EditForm.resources
+D:\DEV\20202021-HK2\Lập trình Window\LTW_rewrite_3rd\LTW_rewrite_3rd\obj\Debug\LTW_rewrite_3rd.myForms.SubjectForm.FSubject.resources

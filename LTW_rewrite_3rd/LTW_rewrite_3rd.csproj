@@ -59,8 +59,20 @@
   <ItemGroup>
     <Compile Include="Access\MyCourses.cs" />
     <Compile Include="Access\MyLogin.cs" />
+    <Compile Include="Access\MyScore.cs" />
     <Compile Include="Access\MyStudents.cs" />
+    <Compile Include="Access\MySubject.cs" />
+    <Compile Include="Database\Course.cs" />
+    <Compile Include="Database\Login.cs" />
+    <Compile Include="Database\MyDataContext.cs" />
+    <Compile Include="Database\MySchool.cs" />
+    <Compile Include="Database\Score.cs" />
+    <Compile Include="Database\student.cs" />
+    <Compile Include="Database\Subject.cs" />
     <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\Score.cs" />
+    <Compile Include="Models\std-sub-score.cs" />
+    <Compile Include="Models\Subjects.cs" />
     <Compile Include="myForms\CourseForm\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,24 @@
     </Compile>
     <Compile Include="myForms\CourseForm\FCourse.Designer.cs">
       <DependentUpon>FCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\Fscore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\ScoreForm\Fscore.Designer.cs">
+      <DependentUpon>Fscore.cs</DependentUpon>
     </Compile>
     <Compile Include="myForms\StudentForm\AddForm.cs">
       <SubType>Form</SubType>
@@ -97,11 +127,25 @@
     <Compile Include="myForms\StudentForm\FStudent.Designer.cs">
       <DependentUpon>FStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="myForms\SubjectForm\AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\SubjectForm\AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\SubjectForm\EditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\SubjectForm\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForms\SubjectForm\FSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForms\SubjectForm\FSubject.Designer.cs">
+      <DependentUpon>FSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="myFunctions\AllUser.cs" />
-    <Compile Include="Database\Login.cs" />
-    <Compile Include="Database\MyDataContext.cs" />
-    <Compile Include="Database\MySchool.cs" />
-    <Compile Include="Database\student.cs" />
     <Compile Include="Models\Logins.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="myForms\Login\LoginForStart.cs">
@@ -142,6 +186,15 @@
     <EmbeddedResource Include="myForms\Login\LoginForStart.resx">
       <DependentUpon>LoginForStart.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myForms\ScoreForm\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\ScoreForm\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\ScoreForm\Fscore.resx">
+      <DependentUpon>Fscore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myForms\StudentForm\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +206,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="myForms\StudentForm\FStudent.resx">
       <DependentUpon>FStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\SubjectForm\AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\SubjectForm\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForms\SubjectForm\FSubject.resx">
+      <DependentUpon>FSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="myForms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -257,6 +319,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\filter_and_sort_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

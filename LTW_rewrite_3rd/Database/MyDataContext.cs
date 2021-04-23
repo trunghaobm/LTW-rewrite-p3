@@ -10,28 +10,24 @@ namespace LTW_rewrite_3rd.Database
 {
     class MyDataContext
     {
-        //string connectionstring = "Data Source=GIDEON;Database=LTW;Integrated Security=True";
-        SqlConnection conn = new SqlConnection("Data Source=GIDEON;Database=LTW;Integrated Security=True");
-
-        //lay thong tin ket noi
+        SqlConnection con = new SqlConnection(@"data source=GIDEON;initial catalog=LTW;integrated security=True");
         public SqlConnection GetConnection
         {
-            get { return conn; }
+            get { return con; }
         }
-        //mo ket noi
+
         public void openConection()
         {
-            if (conn.State == ConnectionState.Closed)
+            if (con.State == ConnectionState.Closed)
             {
-                conn.Open();
+                con.Open();
             }
         }
-        //ong ket noi
         public void closedConection()
         {
-            if (conn.State == ConnectionState.Open)
+            if (con.State == ConnectionState.Open)
             {
-                conn.Close();
+                con.Close();
             }
         }
     }

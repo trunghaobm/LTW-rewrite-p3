@@ -10,15 +10,16 @@ namespace LTW_rewrite_3rd.Database
     public partial class student
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int C01_id { get; set; }
+        [StringLength(50)]
+        public string C01_id { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string C02_firtsname { get; set; }
+        public string C02_firstname { get; set; }
 
         public string C03_lastname { get; set; }
 
+        [Column(TypeName = "date")]
         public DateTime? C04_birthday { get; set; }
 
         public bool? C05_gender { get; set; }
